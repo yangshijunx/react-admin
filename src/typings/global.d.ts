@@ -32,10 +32,3 @@ declare interface MenuInfo {
 	item: React.ReactInstance;
 	domEvent: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>;
 }
-export {};
-
-declare global {
-	interface Window {
-		__REDUX_DEVTOOLS_EXTENSION_COMPOSE__: Function;
-	}
-}

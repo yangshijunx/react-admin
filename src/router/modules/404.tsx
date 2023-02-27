@@ -1,10 +1,11 @@
 import { RouteObject } from "@/router/interface";
-import Error404 from "@/compontents/ErrorMessage/404";
+import React from "react";
+import lazyLoad from "../utils/lazyLoad";
 
 const errorRouter: RouteObject[] = [
 	{
 		path: "/404",
-		element: <Error404 />,
+		element: lazyLoad(React.lazy(() => import("@/compontents/ErrorMessage/404"))),
 		meta: {
 			requiresAuth: false,
 			title: "404页面",
